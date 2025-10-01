@@ -1,0 +1,82 @@
+Overview
+
+This repository contains the work submitted for the Getting and Cleaning Data course project.
+The goal of the project is to demonstrate the ability to collect, work with, and clean a dataset to create a tidy dataset that can be used for further analysis.
+
+
+---
+
+Files in this Repository
+
+run_analysis.R: The R script that performs all steps of the data cleaning.
+
+tidy_dataset.txt: The final tidy dataset created by the script.
+
+CodeBook.md: Explains the variables, data, and transformations performed.
+
+README.md: Provides an overview of the project and instructions.
+
+
+
+---
+
+How the Script Works
+
+The script run_analysis.R performs the following steps:
+
+1. Load libraries – Uses the dplyr package.
+
+
+2. Read raw data – Reads features, activity labels, training and test datasets.
+
+
+3. Merge datasets – Combines training and test data into one dataset.
+
+
+4. Extract mean and standard deviation measurements.
+
+
+5. Use descriptive activity names – Replaces activity codes with names.
+
+
+6. Label variables clearly – Makes variable names descriptive and readable.
+
+
+7. Create tidy dataset – Groups data by subject and activity, and calculates the average for each measurement.
+
+
+8. Save output – Exports the tidy dataset into tidy_dataset.txt.
+
+
+
+
+---
+
+How to Run the Script
+
+1. Download and unzip the data:
+UCI HAR Dataset
+
+
+2. Place the UCI HAR Dataset folder in your working directory.
+
+
+3. Run the script in R:
+
+source("run_analysis.R")
+
+
+4. The tidy dataset tidy_dataset.txt will be created in the working directory.
+
+
+
+
+---
+
+Final Dataset
+
+File name: tidy_dataset.txt
+
+Dimensions: 180 rows × 68 columns
+
+Description: Contains the average of each variable for each activity and each subject.
