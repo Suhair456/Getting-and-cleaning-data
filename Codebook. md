@@ -1,0 +1,64 @@
+CodeBook
+
+Overview
+
+This CodeBook describes the variables, the data, and the transformations performed to clean and create the final tidy dataset for the Getting and Cleaning Data Course Project.
+
+The data used in this project comes from the "Human Activity Recognition Using Smartphones" dataset collected by the UCI Machine Learning Reposito.
+Raw Data
+
+Source: UCI HAR Dataset
+
+Files included:
+
+features.txt: List of all features measured.
+
+activity_labels.txt: Links activity IDs to activity names.
+
+train/ and test/ folders: Contain the training and test datasets.
+Variables
+
+subject: ID of the subject (integer: 1–30).
+
+activity: Type of activity performed (character: WALKING, SITTING, etc.).
+
+features:
+
+Variables are sensor signals (accelerometer, gyroscope) measured as mean and standard deviation.
+
+Units are normalized and bounded within [-1, 1].
+Transformations
+
+The following transformations were applied in the script run_analysis.R:
+
+1. Merge training and test sets to create one dataset.
+
+
+2. Extract measurements only on the mean and standard deviation.
+
+
+3. Replace activity codes with descriptive activity names.
+
+
+4. Rename variables with descriptive names (e.g., tBodyAcc-mean() → TimeBodyAccelerometerMean).
+
+
+5. Create a second tidy dataset with the average of each variable for each subject and each activity.
+
+
+
+
+---
+
+Final Dataset
+
+File name: tidy_dataset.txt
+
+Content:
+
+Each row = unique subject + activity combination.
+
+Each column = average value of a variable.
+
+
+Size: 180 rows × 68 columns.
